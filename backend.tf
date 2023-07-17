@@ -1,12 +1,6 @@
 provider "aws" {
     region = "ap-southeast-2"
 
-    assume_role {
-        role_arn = "arn:aws:iam::785157979237:role/GitHubAction-AssumeRoleWithAction"
-        session_name = "tf-aws-bunnn-cloud-resume"
-        external_id = "mr-nget-1@github"
-    }
-
     #default_tags{
     #    tags = <add here>
     #}
@@ -26,7 +20,7 @@ terraform {
 # You should normally separate your infrastructure and the objects that setup your infrastructure.
 # However we are just doing a demo/challenge.
 backend  "s3" {
-  bucket = "tf-aws-bunnn-cloud-resume-state-bucket"
+  bucket = "tf-aws-bunnn-cloud-resume.state"
   key = "terraform.tfstate"
   region = "ap-southeast-2"
   encrypt = true

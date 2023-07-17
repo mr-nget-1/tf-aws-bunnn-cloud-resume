@@ -24,8 +24,8 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credential@master
         with:
-          role-to-assume: ${{env.IAM_ROLE}}
-          aws-region: ${{env.AWS_REGION}}
+          role-to-assume: ${{ env.IAM_ROLE }}
+          aws-region: ${{ env.AWS_REGION }}
 
       - uses: actions/checkout@v3
       - uses: hashicorp/setup-terraform@v2
@@ -40,7 +40,6 @@ jobs:
         run: terraform init
     
       - name: Terraform Validate
-        id: validate
         run: terraform validate
     
       - name: Terraform Plan

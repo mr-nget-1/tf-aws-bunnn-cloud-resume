@@ -1,11 +1,10 @@
-#tfsec:ignore:aws-s3-enable-versioning
-#tfsec:ignore:aws-s3-encryption-customer-key 
+#tfsec:ignore:aws-s3-enable-versioning tfsec:ignore:aws-s3-encryption-customer-key
 
 resource "aws_s3_bucket" "cloud-resume-site-bucket" {
   bucket = "tf-aws-mr-nget-1-cloud-resume"
-  logging {
-        target_bucket = "<target-bucket>"
-    }
+  #logging {
+  #      target_bucket = "<target-bucket>"
+  #  }
 
   server_side_encryption_configuration {
     rule {

@@ -1,4 +1,5 @@
 name: Run tfsec on PR
+
 on: [pull_request]
 jobs:
   tfsec:

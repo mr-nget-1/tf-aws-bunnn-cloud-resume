@@ -55,7 +55,7 @@ resource "aws_s3_bucket_website_configuration" "cloud_resume_site_bucket" {
 
 
 
-
+#EPISODE 5
 #CloudFront Distribution
 resource "aws_cloudfront_origin_access_identity" "cloud_resume_site_bucket" {
   comment = "Used for the cloud_resume_site_bucket"
@@ -78,7 +78,7 @@ resource "aws_cloudfront_distribution" "cloud_resume_site_bucket" {
 
     logging_config {
     include_cookies = false
-    bucket          = aws_s3_bucket.cloud_resume_logging_bucket.domain_name
+    bucket          = aws_s3_bucket.cloud_resume_logging_bucket.bucket_domain_name
     prefix          = "cloud-resume-cf-logs"
   }
 
@@ -104,6 +104,7 @@ resource "aws_cloudfront_distribution" "cloud_resume_site_bucket" {
 }
 
 
+#EPISODE 5
 #AWS S3 Bucket Policy - cloud_resume_site_bucket
 #Origin Access Identity - Updating Bucket Policy
 resource "aws_s3_bucket_policy" "cloud_resume_site_bucket" {
@@ -124,6 +125,7 @@ data "aws_iam_policy_document" "s3_policy" {
 }
 
 
+#EPISODE 1-3
 #tfsec:ignore:aws-s3-enable-bucket-logging
 #tfsec:ignore:aws-s3-encryption-customer-key
 resource "aws_s3_bucket" "cloud_resume_logging_bucket" {

@@ -86,14 +86,17 @@ resource "aws_cloudfront_distribution" "cloud_resume_site_bucket" {
   default_cache_behavior {
     # Using the CachingDisabled managed policy ID:
     cache_policy_id  = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad"
-    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+    viewer_protocol_policy = "redirect-to-https"
+    allowed_methods  = ["GET", "HEAD"]
+    cached_methods  = ["GET", "HEAD"]
     target_origin_id = "myS3CloudResumeSiteOrigin"
+
   }
 
   restrictions {
     geo_restriction {
       restriction_type = "whitelist"
-      locations        = ["US", "CA", "GB", "DE"]
+      locations        = ["US", "CA"]
     }
   }
 
@@ -104,7 +107,7 @@ resource "aws_cloudfront_distribution" "cloud_resume_site_bucket" {
 }
 
 
-#EPISODE 5
+#EPISODE 5aws_cloudfront_distribution
 #AWS S3 Bucket Policy - cloud_resume_site_bucket
 #Origin Access Identity - Updating Bucket Policy
 resource "aws_s3_bucket_policy" "cloud_resume_site_bucket" {
@@ -112,7 +115,7 @@ resource "aws_s3_bucket_policy" "cloud_resume_site_bucket" {
   policy = data.aws_iam_policy_document.cloud_resume_site_bucket.json
 }
 
-data "aws_iam_policy_document" "s3_policy" {
+data "aws_iam_policy_document" "cloud_resume_site_bucket" {
   statement {
     actions   = ["s3:GetObject"]
     resources = ["${aws_s3_bucket.cloud_resume_site_bucket.arn}/*"]

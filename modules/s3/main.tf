@@ -80,6 +80,8 @@ resource "aws_cloudfront_distribution" "cloud_resume_site_bucket" {
 
   }
 
+  price_class = "PriceClass_100"
+
   restrictions {
     geo_restriction {
       restriction_type = "whitelist"

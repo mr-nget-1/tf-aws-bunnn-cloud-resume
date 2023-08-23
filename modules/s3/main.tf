@@ -172,3 +172,7 @@ resource "aws_s3_bucket_logging" "cloud_resume_logging_bucket" {
   target_bucket = aws_s3_bucket.cloud_resume_logging_bucket.id
   target_prefix = "log/"
 }
+
+
+# TODO: Make a pretty README file. 
+# TODO: Setup custom domain Route53

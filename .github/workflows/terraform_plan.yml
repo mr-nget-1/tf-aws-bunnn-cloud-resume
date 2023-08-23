@@ -17,7 +17,7 @@ jobs:
       tf_actions_working_dir: ${{ steps.identify_path.outputs.working_dir_path }}
 
     steps:
-      - name: "identify working directory path"
+      - name: identify working directory path
         id: identify_path
         run: |
           if [[ "${{ github.base_ref }}" != "main" ]]; then

@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   identify_path:
-    name: "identify working environment path"
+    name: identify working environment path
     runs-on: ubuntu-latest
     outputs:
       tf_actions_working_dir: ${{ steps.identify_path.outputs.working_dir_path }}

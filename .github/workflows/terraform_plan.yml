@@ -24,9 +24,10 @@ jobs:
             echo "working_dir_path = nonprod" >> $GITHUB_OUTPUT
           fi
           if [[ "${{ github.base_ref }}" == "main" ]]; then
-            echo "working_dir_path = prod" >> $GiTHUB_OUTPUT
+            echo "working_dir_path = prod" >> $GITHUB_OUTPUT
           fi
-
+          #
+          
   build:
     name: "plan"
     runs-on: ubuntu-latest
@@ -34,7 +35,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: "${{ needs.identify_path.outputs.tf_actions_working_dir }}/"
+        working-directory: ${{ needs.identify_path.outputs.tf_actions_working_dir }}
   
     steps:
       - name: configure aws credentials
@@ -54,9 +55,3 @@ jobs:
         id: plan
         run: terraform plan
         continue-on-error: false
-
-      - name: Terraform Apply
-        id: apply
-        run: terraform apply -auto-approve
-        continue-on-error: false
-

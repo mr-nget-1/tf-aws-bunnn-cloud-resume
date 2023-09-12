@@ -56,17 +56,12 @@ Workflows - efs
 
 ![BlueGreen](https://user-images.githubusercontent.com/118230168/233266682-ee69594e-8294-483f-a240-0b7ef97ab002.png)
 
-![wf_main_sandpit](https://github.com/uts-itd/iac_aws_fess_dependencies/assets/120345179/554bb604-8bf0-4754-8ad6-55d498207c39)
+![wf_main_sandpit](https://github.com/mr-nget-1/tf-aws-bunnn-cloud-resume/assets/139294222/e5a507bc-9699-4971-8223-34f0cb108612)
 
-- **environment_type**: sandpit, preprod or prod.
-- **Blue environment** represents current application version serving production traffic.
-- **Green environment** is staged running the newer version. 
-
-Pass the inputs to either 1 or 0 depending on which servers you want to flow the traffic. Options are 1 and 0 where 1 will flow 100% of traffic to blue/green and 0 will flow null to blue/green. 
-
-In this project, Green is set to 1 and Blue is set to 0 by default.
+- **Environment to deploy**: sandpit, sit.
+- **Destroy environment**: true/false (default). 
 
 ### ![#1589F0](https://via.placeholder.com/10/1589F0?text=+) **Output** <br />
-The workflow will change the routing traffic from old instances to the new instances.
+The workflow output the AWS EFS ID.
 
 <br />

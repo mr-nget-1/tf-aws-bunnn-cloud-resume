@@ -63,6 +63,6 @@ AWF EFS Deployment: Create_EFS
 
 ### ![#1589F0](https://via.placeholder.com/10/1589F0?text=+) **Output** <br />
 
-aws_efs_id: The workflow will create and AWS EFS and the file system id obtained after creation is then passed to this output value. 
+<b>aws_efs_id:</b> The workflow will create and AWS EFS and the file system id obtained after creation is then passed to this output value. 
 
 <br />

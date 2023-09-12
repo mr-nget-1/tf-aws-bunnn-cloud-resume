@@ -8,7 +8,7 @@ The purpose of this repo is to deploy and create AWS dependencies for the DDMS F
 
 
 
-## Current Configuration
+## CURRENT CONFIGURATION
 
 ### Subnet
 - Provide the IDs of the different private subnets in your infrastructure.
@@ -54,12 +54,12 @@ Workflows - efs
 
 <br />
 
-## DEPLOY
+#### DEPLOY
 To Deploy EFS
 
 <br />
 
-## DESTROY
+#### DESTROY
 To Destroy EFS
 
 

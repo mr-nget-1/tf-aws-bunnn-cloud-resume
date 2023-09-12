@@ -1,3 +1,7 @@
+#I have opted to forego certain features such as a WAF, custom KMS, etc.
+#becuase this would incur additional cost without much gain. 
+#The site that is being deployed has no sensitive data and is essentially a static webpage.
+
 #tfsec:ignore:aws-s3-enable-versioning
 #tfsec:ignore:aws-s3-encryption-customer-key
 resource "aws_s3_bucket" "cloud_resume_site_bucket" {
@@ -48,6 +52,7 @@ resource "aws_cloudfront_origin_access_identity" "cloud_resume_site_bucket" {
   comment = "Used for the cloud_resume_site_bucket"
 }
 
+#tfsec:ignore:aws-cloudfront-enable-waf
 resource "aws_cloudfront_distribution" "cloud_resume_site_bucket" {
   origin {
     domain_name = aws_s3_bucket.cloud_resume_site_bucket.bucket_regional_domain_name

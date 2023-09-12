@@ -46,12 +46,12 @@ The purpose of this repo is to deploy and create AWS dependencies for the DDMS F
 
 
 ### WORKFLOW
+Workflows - efs
 
-### EFS
+#### DEPLOY
+To Deploy EFS
 
-### DEPLOY
-
-
-### DESTROY
+#### DESTROY
+To Destroy EFS
 
 

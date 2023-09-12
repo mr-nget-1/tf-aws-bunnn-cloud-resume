@@ -10,7 +10,7 @@ The purpose of this repo is to deploy and create AWS dependencies for the DDMS F
 
 ## Current Configuration
 
-## Subnet
+### Subnet
 - Provide the IDs of the different private subnets in your infrastructure.
 
 [Configuration] <br />
@@ -27,7 +27,7 @@ The purpose of this repo is to deploy and create AWS dependencies for the DDMS F
 
 <br />
 
-## Security Group
+### Security Group
 - Provide the Security Groups created for the EFS. 
 
 [Configuration] <br />
@@ -45,13 +45,13 @@ The purpose of this repo is to deploy and create AWS dependencies for the DDMS F
 <br />
 
 
-### WORKFLOW
+## WORKFLOW
 Workflows - efs
 
-#### DEPLOY
+### DEPLOY
 To Deploy EFS
 
-#### DESTROY
+### DESTROY
 To Destroy EFS
 
 

@@ -41,5 +41,17 @@ The purpose of this repo is to deploy and create AWS dependencies for the DDMS F
   ```
 
 <br />
+<br />
+<br />
+
+
+### WORKFLOW
+
+### EFS
+
+#### DEPLOY
+
+
+#### DESTROY
 
 
